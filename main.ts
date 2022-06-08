@@ -5,60 +5,43 @@ basic.forever(function () {
     DigitalPin.P2,
     PingUnit.Centimeters
     )))
-    basic.showNumber(sonar.ping(
-    DigitalPin.P1,
-    DigitalPin.P2,
-    PingUnit.Centimeters
-    ))
     if (sonar.ping(
     DigitalPin.P1,
     DigitalPin.P2,
     PingUnit.Centimeters
-    ) > 20) {
+    ) > 1) {
+    	
+    }
+    if (sonar.ping(
+    DigitalPin.P1,
+    DigitalPin.P2,
+    PingUnit.Centimeters
+    ) < 1) {
         basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . # . .
-            . . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . # . .
-            . # . # .
-            . . # . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . # . .
-            . # . # .
-            # . . . #
-            . # . # .
-            . . # . .
-            `)
-        basic.showLeds(`
-            # . . . #
-            . # . # .
-            . . # . .
-            . # . # .
-            # . . . #
-            `)
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
+            . # # . .
+            # . . # .
+            # # # # .
+            # . . # .
+            # . . # .
             `)
     }
 })
 basic.forever(function () {
-    music.playTone(330, music.beat(BeatFraction.Whole))
-    music.playTone(440, music.beat(BeatFraction.Whole))
-    music.playTone(523, music.beat(BeatFraction.Whole))
+    music.playTone(294, music.beat(BeatFraction.Quarter))
+    music.playTone(330, music.beat(BeatFraction.Quarter))
+    music.playTone(392, music.beat(BeatFraction.Quarter))
+    music.playTone(330, music.beat(BeatFraction.Quarter))
     music.playTone(494, music.beat(BeatFraction.Whole))
-    music.playTone(440, music.beat(BeatFraction.Double))
-    music.playTone(659, music.beat(BeatFraction.Whole))
-    music.playTone(587, music.beat(BeatFraction.Double))
-    music.playTone(494, music.beat(BeatFraction.Double))
+    music.playTone(494, music.beat(BeatFraction.Whole))
+    music.playTone(440, music.beat(BeatFraction.Whole))
+    music.playTone(294, music.beat(BeatFraction.Quarter))
+    music.playTone(330, music.beat(BeatFraction.Quarter))
+    music.playTone(392, music.beat(BeatFraction.Quarter))
+    music.playTone(330, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Quarter))
+    music.playTone(440, music.beat(BeatFraction.Whole))
+    music.playTone(392, music.beat(BeatFraction.Whole))
+    music.playTone(294, music.beat(BeatFraction.Whole))
+    music.playTone(330, music.beat(BeatFraction.Whole))
+    music.playTone(392, music.beat(BeatFraction.Whole))
 })
